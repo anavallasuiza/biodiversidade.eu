@@ -1,0 +1,1069 @@
+.formulario-pisos {
+	 fieldset {
+		margin-bottom: 20px;
+		background: color($verde-escuro, 15);
+		background: linear-gradient(to bottom, color($verde-escuro, 10), color($verde-escuro, 15));
+		border: 1px solid color($verde-escuro, 30);
+		padding: 15px;
+		box-sizing:border-box;
+		border-radius: 8px;
+
+		> h1 {
+			font-size: 1.4rem;
+			margin:0 0 15px 0;
+			text-shadow:1px 1px 0 white;
+			color:color($verde-escuro, 70);
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+		}		
+
+		h2 {
+			font-size: 1.2rem;
+			margin:0 0 10px 0;
+			text-shadow:1px 1px 0 #E8F5E3;
+		}
+
+		fieldset {
+			background: color($verde-escuro, 25);
+
+			h1 {
+				font-size: 1.2rem;
+				color:$verde-escuro;
+			}
+			h2 {
+				font-size: 1rem;
+			}
+		}
+
+		.miniatura {
+			margin-bottom: 10px;
+		}
+
+		.formulario-field {
+			margin-bottom: 20px;
+
+			&.obrigatorio {
+				label {
+					&::before {
+						content: '* ';
+						color:$verde;
+					}
+				}
+			}
+
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			select {
+				font-size: 0.9rem;
+			}
+			> label {
+				width: 20%;
+				margin-right: 5%;
+				float: left;
+				font-size: 1rem;
+				font-weight: bold;
+				color: $verde-escuro;
+			}
+
+			> div {
+				overflow: hidden;
+				padding: 2px;
+			}
+				
+			label.upload-button-remove {
+				display: inline-block;
+				float: none;
+				font-size: 1rem;
+				margin: 0 10px 0 0;
+				width: auto;
+			}
+				
+			input[type="checkbox"] + label {
+				display: inline-block;
+				margin-left: 3px;
+			}
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			textarea,
+			.ck-placeholder {
+				width: 100%;
+				padding: 4px;
+				float: left;
+				font-size: 0.9rem;
+			}
+
+			input::input-placeholder {
+				color: color(black, 45);
+			}
+
+			.ck-placeholder {
+				padding: 4px 0;
+			}
+
+            .listaxe-especies.acompanantes, .selector-despregable {
+				width: 100% !important;
+			}
+
+            /*
+			.file-uploader {
+				.upload-button-link {
+					display: inline-block;
+					direction: rtl;
+					max-width: 360px;
+					overflow: hidden;
+					height: 24px;
+					text-align: left;
+					text-overflow: ellipsis;
+				}
+			}
+            */
+
+            select.w100,
+			input.w100,
+            div.w100 {
+                box-sizing: border-box;
+				width: 100%;
+			}
+            
+			select.w3,
+			input.w3 {
+				width: 300px;
+			}
+
+			select.w2,
+			input.w2 {
+				width: 140px;
+			}
+
+			span.error {
+				color: color($vermello, 90);
+				display: block;
+				font-size: 0.9rem;
+				font-weight: normal;
+			}
+		}
+	}
+
+	.formulario-field-cols {
+		margin-bottom: 20px;
+
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		p.label {
+			width: 20%;
+			margin-right: 5%;
+			float: left;
+			font-size: 0.9rem;
+		}
+
+		label {
+			font-size: 0.9rem;
+		}
+		> label {
+			font-size: 0.9rem;
+			font-weight: bold;
+			float: left;
+			width: 20%;
+			margin-right: 5%;
+		}
+		> div {
+			overflow: hidden;
+			padding: 2px;
+			
+			label {
+				display: inline-block;
+				margin-right: 20px;
+			}
+		}
+
+		select {
+			font-size: 0.9rem;
+			margin:0 10px;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		input[type="email"] {
+			padding: 4px;
+			margin:0 15px 0 2px;
+			font-size: 0.9rem;
+		}
+
+		select.w2,
+		input.w2 {
+			width: 140px;
+		}
+
+		p.radio-group {
+			display: inline;
+			margin-right: 15px;
+			
+			label {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	.formulario-field-bloque {
+		margin-bottom: 20px;
+
+		> label, p.label {
+			font-weight: bold;
+			float: left;
+			width: 20%;
+			margin-right: 5%;
+			font-size: 0.9rem;
+		}
+
+		h1 {
+			font-weight: bold;
+			font-size: 0.9rem;
+			color: $verde-escuro;
+			margin-bottom: 5px;
+		}
+
+		> div {
+			overflow: hidden;
+			padding: 2px;
+		}
+
+		.bloque-left {
+			margin-bottom: 20px;
+
+			> section {
+				margin: 10px 0 0;
+				padding: 10px 0 0;
+				box-sizing:border-box;
+			}
+
+			p.doc {
+				font-weight: bold;
+				a {
+					color:$azul;
+					text-decoration: none;
+					
+					&:hover {
+						color:black;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+        
+        span.error {
+            color: color($vermello, 90);
+            display: block;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+	}
+
+	.erros-axuda {
+		padding: 15px 25px;
+		box-sizing:border-box;
+		color:color(black, 60);
+		font-size: 0.85rem;
+
+		a {
+			color:color($verde-escuro, 70);
+
+			&:hover {
+				text-decoration:none;
+			}
+		}
+	}
+
+	.btn.btn-highlight {
+		font-size: 1.2rem;
+		float: right;
+	}	
+
+	fieldset.footer {
+		background: none;
+		padding: 0;
+		border:0;
+		
+		.formulario-buttons {
+			button,.btn {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.imagelist {
+		list-style: none;
+		margin: 0;
+	}
+
+	.membros {
+		list-style: none;
+		margin: 20px 0 0px 0;
+
+		> li {
+			display: inline-block;
+			margin:5px;
+			font-size: 0.9rem;
+
+			a {
+				background: color($verde-escuro, 60);
+				color:white;
+				text-decoration: none;
+				padding: 3px 6px 3px 3px;
+				display: block;
+				border-radius: 4px;
+				border:1px solid color($verde-escuro, 70);
+
+				img {
+					border-radius: 2px;
+					display: inline-block;
+					margin-right: 2px;
+					padding: 2px;
+					background: color(black,15);
+				}
+			}
+
+			a:hover {
+				background: color($verde, 60);
+				color:$verde-escuro;
+				border-bottom-color:$verde-escuro;
+
+			}
+
+			i {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.formulario-pisos {
+	 	fieldset {
+	 		.formulario-field {
+				> label {
+					float: none;
+				}
+            }
+	 	}
+	}
+}
+
+.select2-choices  {
+	font-size: 0.9rem;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+	height: auto;
+}
+
+/* -------------- .content-mapa
+ */
+.content-mapa {
+    background: #FFF;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px #D9D9D9;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 5px;
+
+    #mapa-toolbar-top {
+        background: #FFF;
+        padding: 0 0 4px 0;
+    }
+    
+    .toolbar-mapa .separator {
+        border-left: 1px solid #999;
+        display: inline-block;
+        height: 8px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    &.fullscreen {
+        height: 100%;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+
+        #mapa-toolbar-top {
+            box-sizing: border-box;
+            height: 37px;
+            padding: 4px;
+        }
+
+        .columnas {
+            margin: 7px;
+        }
+    }
+}
+
+/* --------------------- .upload-button
+ */
+
+.file-uploader {
+	
+	display: inline-block;
+    margin-bottom: 2px;
+	
+	.upload-button {
+		
+		display: inline-block;
+		float: right;
+		position: relative;
+		
+		button {
+		}
+		
+		input[type="file"] {
+			left: 0;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+	
+	.previous-file {
+		
+		display: inline-block;
+        overflow: hidden;
+		
+		.upload-button-link {
+			color: $azul;
+			margin-right: 4px;
+            display: inline-block;
+            direction: rtl;
+            max-width: 360px;
+            overflow: visible;
+            height: 24px;
+            text-align: right;
+            white-space: nowrap;
+            
+            &[href="#"] {
+                color: #000;
+                cursor: default;
+                text-decoration: none;
+            }
+		}
+        
+		
+		.upload-button-remove {
+			margin-right: 15px;
+				
+			i.remove-icon {
+				display: inline-block;
+			}
+			
+			i.restore-icon {
+				display: none;
+			}
+		}
+		
+		&.deleted {
+			.upload-button-link {
+				color: #999;
+                text-decoration: line-through;
+			}
+			
+			.upload-button-remove {
+				i.remove-icon {
+					display: none;
+				}
+				
+				i.restore-icon {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+
+/* --------------------- .item-list
+ */
+
+.item-list {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    .formulario-field.item-content {
+        input[type="text"] {
+            float: none;
+        }
+    }
+    
+    .new-item {
+        
+        .item-content {
+            display: none;
+        }
+    }
+}
+
+/* --------------------- .calendar
+ */
+
+.ui-datepicker .ui-datepicker-title,
+.ui-datepicker table,
+.ui-timepicker-div,
+.ui-datepicker .ui-datepicker-buttonpane {
+	font-size: 0.75rem !important;
+}
+
+.ui-timepicker-div dl dd {
+	  margin: 0 10px 10px 100px;
+}
+
+
+/* --------------------- .imagelist
+ */
+
+.imagelist {
+
+	list-style-type: none;
+	margin: 0 0 0 -30px;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin-bottom: 10px;
+		margin-left: 28px;
+		position: relative;
+		vertical-align: top;
+        text-align: center;
+		width: 130px;
+        
+
+		&.removed {
+			/*float: left;*/
+
+			.overlay {
+
+				box-shadow: 0px 0px 0px #999;
+
+				.background {
+					background: #999;
+					height: 100%;
+					opacity: 0.6;
+				}
+
+				.button-restore {
+					margin-left: 10px;
+					position: absolute;
+					top: 45%;
+				}
+			}
+		}
+
+		figure {
+			border-radius: 1px;
+			box-shadow: 0px 0px 1px #444;
+			box-sizing: border-box;
+			background: #FFF;
+			height: 100px;
+			margin: 0 auto 4px;
+			width: 120px;
+
+			img {
+				border-radius: 1px;
+				border: 0;
+				width: 100%;
+			}
+		}
+
+		input[type="text"] {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		.imagelist-picker {
+			overflow: hidden;
+			position: relative;
+
+			.imagelist-input {
+				cursor: pointer;
+				display: block;
+				height: 90px;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				z-index: 100;
+				width: 120px;
+			}
+
+			.imagelist-container {
+				border: 0px solid #D9DADA;
+				height: 95px;
+				left: 0;
+				line-height: 90px;
+				position: absolute;
+				top: 0;
+				text-align: center;
+				width: 120px;
+
+				.imagelist-preview {
+					height: auto;
+					vertical-align: middle;
+				}
+
+				.imagelist-message {
+					font-size: 0.8rem;
+					font-style: italic;
+					/*display: none;*/
+					height: 100px;
+					top: 0;
+					position: absolute;
+					width: 100%;
+					text-align: center;
+					background: #FFF;
+					line-height: 7.5rem;
+
+					i {
+						color: #333;
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+
+		.imagelist-actions {
+			overflow: hidden;
+			padding-bottom:8px;
+			text-align: center;
+
+			.btn {
+				font-size: 0.9rem;
+				padding: 2px 4px;
+				margin-left: 2px;
+
+				span {
+					font-weight: normal;
+				}
+			}
+		}
+
+		.select2-container {
+            margin: 2px 0;
+            text-align: left;
+			width: 100% !important;
+		}
+	}
+
+	span.error {
+		color: color($vermello,90);
+		font-size: 0.8rem;
+	}
+}
+
+.imaxes-eliminadas {
+
+	margin-top: 10px;
+
+	.imagelist-removed {
+
+		margin-left: -30px;
+		margin-top: 10px;
+
+		li {
+
+			display: inline-block;
+			margin-bottom: 10px;
+			margin-left: 30px;
+			position: relative;
+			vertical-align: top;
+
+			figure {
+				border-radius: 1px;
+				box-shadow: 0px 0px 1px #444;
+				box-sizing: border-box;
+				background: #FFF;
+				height: 70px;
+				line-height: 65px;
+				margin-bottom: 4px;
+				vertical-align: middle;
+				width: 100px;
+
+				img {
+					border-radius: 1px;
+					border: 0;
+					vertical-align: middle;
+					width: 100%;
+				}
+			}
+
+			a {
+				color: $azul;
+				display: block;
+				font-size: 0.8rem;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/* --------------------- -selector-imaxe
+ */
+
+figure.preview-imaxe {
+
+	border-radius: 1px;
+	box-shadow: 0px 0px 1px #444;
+	box-sizing: border-box;
+	background: #FFF;
+	height: auto;
+	padding: 4px;
+	width: 100%;
+
+	img {
+		border-radius: 1px;
+		border: 0;
+		width: 100%;
+	}
+
+	small {
+		color: #999;
+		display: block;
+		font-size: 8.64px;
+		font-size: 0.6rem;
+		font-style: italic;
+		margin-top: 4px;
+		padding-left: 4px;
+		text-decoration: none;
+	}
+}
+
+figure.selector-imaxe {
+
+	border-radius: 1px;
+	box-shadow: 0px 0px 1px #444;
+	box-sizing: border-box;
+	background: #FFF;
+	height: 100px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	padding: 4px;
+	position: relative;
+	width: 120px;
+
+	img {
+		border-radius: 1px;
+		border: 0;
+		width: 100%;
+	}
+
+	input[type="file"] {
+
+		cursor: pointer;
+		display: block;
+		height: 90px;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		z-index: 100;
+		width: 120px;
+	}
+
+	.contenedor {
+		border: 0px solid #D9DADA;
+		height: 95px;
+		left: 0;
+		line-height: 90px;
+		position: absolute;
+		top: 0;
+		text-align: center;
+		width: 120px;
+
+		img {
+			height: auto;
+			vertical-align: middle;
+		}
+	}
+
+	.mensaxe {
+		font-size: 0.8rem;
+		font-style: italic;
+		/*display: none;*/
+		height: 100px;
+		top: 0;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		background: #FFF;
+		line-height: 7.5rem;
+
+		i {
+			color: #333;
+			font-size: 3rem;
+		}
+	}
+}
+
+.select2-container-multi .select2-choices  {
+	/*min-height: 32px !important;*/
+}
+
+/*_________________________________ .desplegable
+ */
+.desplegable {
+	border: solid 1px color(black, 20);
+	border-bottom-color: color(black, 30);
+	border-radius: 4px;
+	background: color(black, 12);
+	background: linear-gradient(to bottom, color(black, 2), color(black, 12));
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+    font-size: 0.85rem;
+	padding: 0px 6px;
+	position: relative;
+	vertical-align: bottom;
+
+	&.disabled {
+		background: color(black, 5);
+		color: #999;
+	}
+
+	&.w2 {
+		width: 100px;
+	}
+
+	&.w3 {
+		width: 145px;
+	}
+	> span {
+		display: inline-block;
+		margin-bottom: 2px;
+		margin-top: 4px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 90%;
+	}
+
+	> i {
+		margin-top: 6px;
+	}
+
+	ul {
+		background: #FFF;
+		box-shadow: 0 0 2px color(black,60);
+		box-sizing: border-box;
+		left: 0;
+		list-style-type: none;
+		margin: 0;
+		padding: 4px;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		z-index: 1000;
+
+		li {
+			cursor: pointer;
+			padding: 4px 2px;
+
+			&:hover {
+				background: color($black,5);
+			}
+		}
+	}
+}
+
+/*__________________ .mini-mapa
+ */
+
+.mini-mapa {
+	
+
+	&.modal {
+		margin: 2px;
+	}
+
+	.controles-mapa {
+
+		padding-left: 4px;
+
+		button {
+			font-size: 0.6rem;
+			padding: 4px 8px;
+		}
+
+		.desplegable {
+			font-size: 0.7rem;
+		}
+	}
+
+	nav {
+		
+		padding: 2px 0;
+		text-align: center;
+
+		a {
+			color: $azul;
+			font-size: 0.9rem;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+/* __________________________ .validation-errors
+ */
+
+.validation-errors {
+    display: none;
+    margin: 20px auto;
+
+    > div {
+    	background-color: color($vermello,10);
+    	border: 1px solid color($vermello, 30);
+    	border-radius: 8px;
+    	color: color($vermello,90);
+    	padding: 10px;
+
+    	a {
+    		color: color($vermello,90);
+    		font-weight: bold;
+
+    		&:hover {
+				text-decoration: none;
+			}
+
+    		span.erro {
+    			display: none;
+    		}
+    	}
+    }
+}
+
+/* _____________________________ .point-list
+*/
+
+.formulario-pisos .formulario-field-bloque section.point-list {
+	
+	margin-top: 0;
+	padding-top: 0;
+	
+	h1 {
+		font-size: 1rem;
+		text-shadow: none;
+		color: #000;
+	}
+	
+	ul {
+		font-size: 0.9rem;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			margin-bottom: 8px;
+			margin-right: 25px;
+			width: 45%;
+			
+			span {
+				color: $azul;
+				cursor: pointer;
+				text-decoration: none;
+				
+				&:hover, &.selected {
+					text-decoration: underline;
+				}
+			}
+			
+			.btn {
+				float: right;
+			}
+			
+			.btn.hidden {
+				display: none;
+			}
+			
+			&.novo-punto {
+				
+				text-align: center;
+				
+				.btn {
+					float: none;	
+				}
+			}
+			
+			&.modified {
+				span {
+					font-weight: bold;
+				}
+			}
+			
+			&.new {
+				span {
+					font-style: italic;
+				}
+			}
+			
+			&.deleted {
+				span {
+					color: #999; 
+				}
+			}
+		}
+	}
+}
+
+/* _____________________________ .point-list
+*/
+
+.formulario-pisos .formulario-field-bloque .bloque-left section.editar-puntos {
+
+	#mapa-toolbar {
+		background: #FFF;
+		box-shadow: 0 0 2px #999;
+		height: 30px;
+		padding: 0;
+		width: 100%;
+
+		label {
+			border: 0;
+		}
+
+		button.xeo {
+			float: right;
+            margin-right: 2px;
+		}
+	}
+	
+	> nav {
+		
+		margin: 0 auto;
+		text-align: center;
+		width: 300px;
+		
+		button:first-child {
+			margin-right: 10px;
+		}
+	}
+}
+
+
+.texto-sen-resultado {
+	margin: 40px 0;
+	text-align: center;
+}

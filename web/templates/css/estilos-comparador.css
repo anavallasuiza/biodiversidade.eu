@@ -1,0 +1,263 @@
+ul.comparador {
+	list-style: none;
+	margin: 0 auto;
+	width: 940px;
+
+	> li {
+		margin-bottom:3px;
+
+		ul {
+
+            margin-left: 0;
+            
+			> li {
+				display: inline-block;
+				/*width: 150px;*/
+                
+                > img {
+                    display: block;
+                }
+
+                div.images {
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
+                    
+                    > div {
+                        white-space: nowrap;
+                    }
+                    
+                    &:hover {
+                        img {
+                            opacity:0.7;
+                        }
+                    }
+                }
+                
+                div.actions {
+                    color:color(black,25);
+                    
+                    .previous, .next {
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 0px 4px;
+                        
+                        i {
+                            color:color(black,25);
+                            font-size: 1.4rem;
+                        }
+                    }
+                    
+                    .previous {
+                        left: 2px;
+                    }
+                    
+                    .next {
+                        right: 2px;
+                    }
+                    
+                    div {
+                        text-align: center;
+                        background: white;
+                        min-height: 22px;
+                    }
+                }
+                
+				
+			}
+
+			.info {
+				width: 175px;
+				background:color(black,5);
+				vertical-align: top;
+				color:color(black,25);
+				border-radius: 2px;
+				box-sizing:border-box;
+
+				.move,.remove {
+					width: 15px;
+					float: right;
+					padding: 5px;
+				}
+				.move:hover, .remove:hover {
+					background:color($verde,80);
+					color: white;
+					text-shadow:none;
+					cursor:move;
+				}
+
+				.remove:hover {
+					cursor: pointer;
+				}
+
+				h1 {
+					font-size: 1rem;
+					float: left;
+					padding: 20px;
+
+					a {
+						color:$azul;
+						text-decoration: none;
+						
+						&:hover {
+							text-decoration:underline;
+							color: black;
+						}
+					}
+				} 
+			}
+		}
+
+		ul.fila-titulo {
+			> li {
+				font-size: 0.85rem;
+				background: color($verde,80);
+				color:white;
+				font-weight: bold;
+				padding: 10px;
+				box-sizing:border-box;
+			}
+		}
+        
+        ul.listado {
+            margin-left: 0;
+            
+            li {
+                margin-bottom: 1px;
+            }
+            
+            > li {
+                
+                display: block;
+                
+                > div {
+                    background:color(black,5);
+                }
+            }
+            
+            ul {
+                margin-right: 150px;
+            }
+            
+            .row-placeholder {
+                background: color(black,5);
+                opacity: 0.5;
+            }
+            
+            img {
+                cursor: pointer;
+                display: inline-block;
+            }
+            
+            li > img {
+                display: block;
+            }
+            
+            img.broken-image {
+                background: url('../img/logo-imaxe.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: default;
+            }
+        }
+	}
+}
+
+#engadir-especie {
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
+#modal-especie {
+    
+    padding: 4px;
+    
+    input {
+        width: 100%;
+    }
+    
+    button {
+        margin-top: 10px;
+    }
+}
+
+.overlay-comparador {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    
+    .overlay-background, .overlay-items {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .overlay-background {
+        background: white;
+        opacity: 0.9;   
+    }
+    
+    .overlay-items {
+        opacity: 1;
+        z-index: 10000;
+    
+        .compared-image {
+            background: #FFF;
+            box-shadow: 0px 0px 2px #999;
+            cursor: move;
+            display: inline-block;
+            margin: auto;
+            max-width: 600px;
+            padding: 10px;
+            position: relative;
+            top: 0;
+            left: 0;
+            
+            img {
+                bottom: 0;
+                box-sizing: border-box;
+                display: block;
+                float: none !important;
+                height: auto;
+                left: 0;
+                margin: auto;
+                max-height: 100%;
+                max-width: 100%;
+                padding-bottom: 20px;
+                width: auto;
+            }
+            
+            .image-data {
+                bottom: 0;
+                text-align: center;
+                padding: 0 0 10px;
+                color: color(black,70);
+                font-size: 0.9rem;
+                
+                .button-eliminar {
+                    position: absolute;
+                    top: -24px;
+                    right: 0;
+                    padding: 0 4px;
+                    border: 1px solid black;
+                    color: color(black,50);
+                    background: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    
+    .overlay-toolbar {
+        position: fixed;
+        top: 10px;
+        text-align: center;
+        width: 100%;
+        z-index: 10000;
+    }
+}

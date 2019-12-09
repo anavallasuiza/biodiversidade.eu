@@ -1,0 +1,324 @@
+article.espazo {
+	
+    overflow: hidden;
+    
+	.espazo-miniatura {
+		float: left;
+		margin-right: 20px;
+		border-radius: 6px;
+	}
+
+	header {
+		overflow: hidden;
+		
+		h1 {
+			font-size: 1.2rem;
+
+			> a {
+				color: $azul;
+				text-decoration: none;
+
+				&:hover {
+					color: black;
+					text-decoration: underline;
+				}
+			}
+
+			.estado {
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: normal;
+				padding: 1px 5px;
+				border-radius: 6px;
+			}
+
+			.estado.activa {
+				background: color($laranxa, 50);
+				color:color($laranxa,light:-20);
+			}				
+
+			.estado.solucionada {
+				background: color($verde, 50);
+				color:color($verde,light:-20);
+			}
+		}
+
+		.espazo-informacion {
+			list-style: none;
+			margin: 10px 0 0 0;
+			line-height: 1.2;
+
+			li {
+				display: inline-block;
+				margin: 0 10px 0 0;
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	.listaxe-relacionada {	
+		margin-top: 10px;	
+		header {
+			h1 {
+				font-size: 1rem;
+				line-height: 1.3;
+				margin: 0;
+			}
+		}
+
+		.espazo-especies {
+			list-style: none;
+			margin: 0;
+
+			> li {
+				display: inline-block;
+				width: 190px;
+				vertical-align: top;
+				margin-right: 20px;
+
+				> ul {
+					list-style: none;
+					margin: 0;
+					font-size: 0.9rem;
+					line-height: 1.3;
+
+					a {
+						color: $azul;
+						text-decoration: none;
+
+						&:hover {
+							color: black;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+article.espazo-permalink {
+    
+    overflow: visible;
+    
+	> header {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+
+	.espazo-intro {
+		margin-top: 10px;
+		color: color(black, 80);
+		line-height: 1.3;
+
+		p {
+			margin-bottom: 10px;
+		}
+
+		a {
+			color:$azul;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+    
+    .infoBox {
+        h1 {
+            font-size: 1rem;
+        }
+        
+        p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    }
+}
+
+.sidebar-ficha {
+	.info {
+		section.membros {
+			li {
+				margin: 5px 0;
+
+				img {
+					border-radius: 2px;
+					display: inline-block;
+					margin-right: 5px;
+					padding: 2px;
+					background: color(black,15);
+				}
+
+				a {
+					color:$azul;
+					text-decoration: none;
+				}
+			}
+		}
+
+		section.valoracion {
+			.puntos {
+				font-size: 2.4rem;
+				font-weight: 700;
+				color:color($verde-escuro,60);
+			}
+		}
+	}
+    
+    .espazo-informacion {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+    
+    section.lenda {
+        
+        h1 {
+            margin-bottom: 10px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            
+            img {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------------------- formulario nova rota 
+*/
+
+.novo-espazo {
+
+	.mapa {
+		height: 400px;
+	}
+
+	.form-infowindow {
+		padding: 20px;
+		.formulario-field {
+			margin-bottom: 20px;
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			select {
+				font-size: 0.9rem;
+			}
+			label {
+				width: 20%;
+				margin-right: 5%;
+				float: left;
+				font-size: 0.9rem;
+			}
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			textarea {
+				width: 75%;
+				padding: 4px;
+				float: left;
+				font-size: 0.9rem;
+			}
+			input::input-placeholder {
+				color: color(black, 45);
+			}
+			select.w3,
+			input.w3 {
+				width: 220px;
+			}
+		}
+
+		.footer {
+			text-align: right;
+		}
+	}
+
+	section.puntos-creados {
+		margin-top: 40px;
+
+		> ul {
+			list-style: none;
+			margin: 0;
+
+			> li {
+				font-size: 0.9rem;
+
+				a {
+					color:$azul;
+					text-decoration: none;
+					margin-right: 10px;
+					
+					&:hover {
+						color:black;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+#form-espazo {
+
+    .infoBox {
+        
+        width: 575px;
+        
+        .poi-form {
+            
+            header {
+                h1 {
+                    color: #000;
+                    font-size: 1rem;
+                }
+            }
+            
+            p {
+                font-size: 0.9rem;
+                
+                    
+                label, input, textarea {
+                    display: inline-block;
+                    width: 100%;
+                }
+                
+                input {
+                    padding: 4px;
+                }
+            
+                textarea {
+                    height: 200px;
+                    margin-bottom: 10px;
+                }
+                
+                .cke_chrome {
+                    margin-bottom: 0px !important;
+                }
+                
+                &:first-child {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+#espazos {
+    
+    .subcontent-filter .btn {
+        margin-top: 0;
+    }
+    
+    div.alert.alert-info {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 80px auto;
+    }
+}

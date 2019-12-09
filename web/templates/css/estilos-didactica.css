@@ -1,0 +1,194 @@
+.menu-lateral-didactica {
+	border-radius: 6px;
+	box-shadow: 0 0 2px color(black,35);
+
+	> ul {
+		margin: 0;
+		list-style: none;
+
+		> li {
+			font-size: 0.9rem;
+			display: inline-block;
+			width: 230px;
+
+			> a {
+				text-decoration: none;
+				color:$azul;
+				padding: 9px 15px;
+				display: inline-block;
+				width: 100%;
+				border-bottom: 1px solid color(black,10);
+
+				i {
+					float: right;
+					color:color(black,20);
+				}
+
+				&:hover {
+					background: color(black,5);
+
+					i {
+						color:color(black,40);
+					}
+				}
+			}
+		}
+
+		> li.selected {
+			> a {
+				background: $azul;
+				color:white;
+
+				i {
+					color:white;
+				}
+			}
+		}
+	}
+}
+
+.bloque-didactica {
+	margin-bottom: 40px;
+
+	figure.cabeceira {
+		 img {
+		 	width: 100%;
+		}
+	}
+
+	> header {
+		margin-bottom: 10px;
+		> h1 {
+			font-size: 2rem;
+			color:color(black,40);
+			font-weight: bold;
+			padding-bottom: 15px;
+			border-bottom: 1px solid color(black,10);
+		}
+	}
+
+	.text {
+		p {
+			margin-bottom: 10px;
+		}
+
+		ul {
+			margin-bottom: 10px;
+		}
+
+		a {
+			color:$verde;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+ul.lista-actividades {
+	margin: 0;
+	list-style: none;
+
+	li {
+		padding: 10px;
+		background: color($verde-escuro, 5);
+		margin: 10px 0;
+		border:1px solid color($verde-escuro, 15);
+	}
+}
+article.act-didactica {
+	> header {
+		> h1 {
+			font-size: 1.2rem;
+			a {
+				color:$verde;
+				text-decoration: none;
+				
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+		}
+	}
+
+	.intro {
+		font-size: 0.9rem;
+		margin-bottom: 10px;
+	}
+}
+article.act-didactica.act-didactica-permalink {
+	> header {
+		margin-bottom: 15px;
+		> h1 {
+			font-size: 2.4rem;
+		}
+	}
+
+	.intro {
+		font-size: 1.4rem;
+		line-height: 1.2em;
+		font-weight: bold;
+		color:color(black,40);
+	}
+
+	table {
+		margin-top: 30px;
+		width: 100%;
+
+		th,td {
+			padding: 8px;
+			border: 1px solid color($verde-escuro,40);
+			font-size: 0.9rem;
+		}
+		th {
+			background: color($verde,30);
+		}
+	}
+}
+
+
+ul.lista-doc {
+	margin: 0;
+	list-style: none;
+
+	li {
+		padding: 10px;
+		background: color($verde-escuro, 5);
+		margin: 10px 0;
+		border:1px solid color($verde-escuro, 15);
+	}
+}
+
+article.doc {
+	> header {
+		> h1 {
+			font-size: 1.2rem;
+			a {
+				color:$verde;
+				text-decoration: none;
+				
+				&:hover {
+					text-decoration:underline;
+				}
+			}
+		}
+	}
+
+	.intro {
+		font-size: 0.9rem;
+		margin-bottom: 10px;
+	}
+
+	.btn {
+		font-weight: normal;
+		font-size: 0.9rem;
+		padding: 4px 6px;
+	}
+}
+
+
+
+
+

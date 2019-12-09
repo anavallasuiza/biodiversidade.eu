@@ -1,0 +1,82 @@
+section.comentarios {
+	margin-top: 60px;
+
+	> header {
+		margin: 20px 0 5px 0;
+	}
+
+	> form {
+		background: color($verde-escuro, 10);
+		padding: 15px;
+		border-radius: 6px;
+
+		> img.usuario {
+			float: left;
+			margin-right: 10px;
+		}
+		textarea {
+			display: block;
+			width: 100%;
+			margin: 10px 0;
+		}
+		label {
+			font-weight: bold;
+		}
+	}
+}
+
+.tabs section.comentarios {
+	margin-top: 0;
+}
+
+article.comentario {
+	.comentario-borrar {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+
+	.comentario-borrar a {
+		text-decoration: none;
+		color: rgb(231, 83, 83);
+	}
+
+	.comentario-borrar a span {
+		display: none;
+	}
+
+	> img.usuario {
+		float: left;
+	}
+	.comentario-info, .comentario-contido {
+		padding-left: 60px;
+	}
+	.comentario-info {
+		font-size: 0.9rem;
+
+		.comentario-autor, .comentario-fonte {
+			color: $azul;
+			text-decoration: none;
+		}
+		time {
+			font-size: 0.7rem;
+			color: color(black, 50);
+			margin-left: 10px;
+		}
+	}
+	.comentario-contido {
+		font-size: 0.9rem;
+		color: color(black, 80);
+	}
+}
+
+article.comentario-ultimos {
+	.comentario-info, .comentario-contido {
+		padding-left: 0;
+	}
+	.comentario-info {
+		time {
+			display: block;
+			margin: 0;
+		}
+	}
+}

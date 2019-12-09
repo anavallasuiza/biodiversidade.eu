@@ -1,0 +1,15 @@
+table.dataTable tr.odd, table.dataTable tr.even {
+    background: none;
+}
+
+table.dataTable tr.success {
+    background-color: rgb(161, 201, 44);
+}
+
+table.dataTable tr.error {
+    background-color: rgba(235, 62, 62, 0.75);
+}
+
+table.dataTable tr.warning {
+    background-color: rgb(243, 187, 88);
+}

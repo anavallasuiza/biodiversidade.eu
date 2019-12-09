@@ -1,0 +1,24 @@
+article.resultado {
+
+	header {
+		overflow: hidden;
+		h1 {
+			font-size: 1.2rem;
+
+			> a {
+				color: $azul;
+				text-decoration: none;
+
+				&:hover {
+					color: black;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		small {
+			font-size: 0.9rem;
+			color:color(black,50);
+		}
+	}
+}

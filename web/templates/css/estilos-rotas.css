@@ -1,0 +1,419 @@
+article.rota {
+	overflow: hidden;
+	
+	.rota-miniatura {
+		float: left;
+		margin-right: 20px;
+		border-radius: 6px;
+	}
+
+	header {
+		overflow: hidden;
+		h1 {
+			font-size: 1.2rem;
+
+			> a {
+				color: $azul;
+				text-decoration: none;
+
+				&:hover {
+					color: black;
+					text-decoration: underline;
+				}
+			}
+
+			.estado {
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: normal;
+				padding: 1px 5px;
+				border-radius: 6px;
+			}
+
+			.estado.activa {
+				background: color($laranxa, 50);
+				color:color($laranxa,light:-20);
+			}			
+
+			.estado.solucionada {
+				background: color($verde, 50);
+				color:color($verde,light:-20);
+			}
+		}
+
+		.rota-informacion {
+			list-style: none;
+			margin: 10px 0 0 0;
+			line-height: 1.2;
+
+			li {
+				display: inline-block;
+				margin: 0 10px 0 0;
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+    .tabs-rota {
+        margin-top: 20px;
+    }
+
+	.listaxe-relacionada {	
+		
+        padding-top: 0;
+    
+		header {
+        
+			h1 {
+				font-size: 1rem;
+				line-height: 1.3;
+				margin: 0;
+			}
+		}
+
+		.rota-especies {
+			list-style: none;
+			margin: 0 0 40px 0;
+
+			> li {
+				display: inline-block;
+				width: 190px;
+				vertical-align: top;
+				margin-right: 20px;
+
+				> ul {
+					list-style: none;
+					margin: 0;
+					font-size: 0.9rem;
+					line-height: 1.3;
+
+					a {
+						color: $azul;
+						text-decoration: none;
+
+						&:hover {
+							color: black;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+    .especies-relacionadas {
+    
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        i.nivel-ameaza {
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+    
+            &.n0 {
+                display: none;
+            }
+
+            &.n1 {
+                background: color($verde,light:-10);
+            }
+    
+            &.n2 {
+                background: color($laranxa,light:-10);
+            }
+    
+            &.n3 {
+                background: color($vermello,light:-10);
+            }
+}
+    }
+}
+
+article.rota-permalink {
+    
+    overflow: visible;
+    
+	> header {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+
+	.rota-intro {
+		margin-top: 10px;
+		color: color(black, 80);
+		line-height: 1.3;
+
+		p {
+			margin-bottom: 10px;
+		}
+
+		a {
+			color:$azul;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+
+    .infoBox {
+        h1 {
+            font-size: 1rem;
+        }
+        
+        p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    }
+    
+    #mapa-toolbar-bottom {
+        
+        bottom: 0;
+        width: 100%;
+    }
+    
+    #elevation {
+        
+        background: #FFF;
+        bottom: 0px;
+        box-shadow: 0 0 2px #666;
+        display: inline-block;
+        overflow: hidden;
+        padding: 10px 0 22px 10px;
+        position: absolute;
+        right: 0;
+        width: 280px;
+        
+        p {
+            font-size: 0.8rem;
+        }
+    }
+    
+    .footer-link {
+        text-align: center;
+        
+        a {
+            color: $azul;
+            text-decoration: none;
+            
+            &:hover  {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sidebar-ficha {
+	.info {
+		section.membros {
+			li {
+				margin: 5px 0;
+
+				img {
+					border-radius: 2px;
+					display: inline-block;
+					margin-right: 5px;
+					padding: 2px;
+					background: color(black,15);
+				}
+
+				a {
+					color:$azul;
+					text-decoration: none;
+				}
+			}
+		}
+
+		section.valoracion {
+			text-align: center;
+
+			.puntos {
+				font-size: 2.4rem;
+				font-weight: 700;
+				color:color($verde-escuro,60);
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------------------- formulario nova rota 
+*/
+
+.nova-rota {
+	.form-infowindow {
+		padding: 20px;
+		.formulario-field {
+			margin-bottom: 20px;
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			select {
+				font-size: 0.9rem;
+			}
+			label {
+				width: 20%;
+				margin-right: 5%;
+				float: left;
+				font-size: 0.9rem;
+			}
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			textarea {
+				width: 75%;
+				padding: 4px;
+				float: left;
+				font-size: 0.9rem;
+			}
+			input::input-placeholder {
+				color: color(black, 45);
+			}
+			select.w3,
+			input.w3 {
+				width: 220px;
+			}
+		}
+
+		.footer {
+			text-align: right;
+		}
+	}
+
+	section.puntos-creados {
+		margin-top: 40px;
+
+		> ul {
+			list-style: none;
+			margin: 0;
+
+			> li {
+				font-size: 0.9rem;
+
+				a {
+					color:$azul;
+					text-decoration: none;
+					margin-right: 10px;
+					
+					&:hover {
+						color:black;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.poi-info-window {
+	h1 {
+		margin: 0 0 5px 0;
+		font-size:1.1rem;
+	}
+	p {
+		font-size: 0.9rem;
+		color:color(black, 70);
+	}
+}
+
+
+#form-rota {
+
+    position: relative;
+    
+    .infoBox {
+        
+        width: 575px;
+        
+        .poi-form {
+            
+            header {
+                h1 {
+                    color: #000;
+                    font-size: 1rem;
+                }
+            }
+            
+            p {
+                font-size: 0.9rem;
+                
+                    
+                label, input, textarea {
+                    display: inline-block;
+                    width: 100%;
+                }
+                
+                input {
+                    padding: 4px;
+                }
+            
+                textarea {
+                    height: 200px;
+                    margin-bottom: 10px;
+                }
+                
+                .cke_chrome {
+                    margin-bottom: 0px !important;
+                }
+                
+                &:first-child {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    
+    .boton-distancia {
+        margin-left: 8px;
+    }
+    
+    .overlay  {
+        height: 100%;
+        left: -20px;
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        
+        .overlay-background {
+            background: #000;
+            border-radius: 8px;
+            height: 100%;
+            opacity: 0.2;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .overlay-text {
+            font-size: 1.8rem;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            top: 45%;
+            width: 100%;
+        }
+    }
+}
+
+
+#rotas {
+    
+    .subcontent-filter .btn {
+        margin-top: 0;
+    }
+    
+    div.alert.alert-info {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 80px auto;
+    }
+}

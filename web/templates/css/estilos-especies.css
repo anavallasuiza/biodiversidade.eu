@@ -1,0 +1,1058 @@
+/* ============ ESPECIES ============ */
+
+/* Listado de especies */
+
+ul.especies {
+	list-style: none;
+	margin: 0;
+
+	> li {
+		display: inline-block;
+		width: 150px;
+		vertical-align: top;
+		margin: 0 9px 20px 0;
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            
+            img {
+                border: 0;
+            }
+            
+            h1 {
+                color: $azul;
+            }
+            
+            &:hover {
+                h1 {
+                    text-decoration: underline;
+                }
+            }
+        }
+	}
+}
+
+/* Alta de especies */
+
+.nova-especie {
+    .formulario-pisos fieldset .formulario-field .select-tipo-subespecie {
+        width: 180px;
+    }
+    
+    .formulario-pisos fieldset .formulario-field .nome-subspecie {
+        float: right;
+        width: 460px;
+    }
+    
+    .formulario-pisos fieldset .formulario-field .contenedor-nome input,
+    .formulario-pisos fieldset .formulario-field .contenedor-autor input {
+        width: 100%;
+    }
+    
+    .contenedor-nome, .contenedor-autor {
+        display: inline-block;
+    }
+    
+    .contenedor-nome {
+        width: 55%;
+    }
+    
+    .contenedor-autor {
+        float: right;
+        width: 18%;
+    }
+}
+
+
+/* Miniatura de especie */
+
+article.especie {
+	position: relative;
+
+	i.nivel-ameaza {
+		height: 25px;
+		width: 25px;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		&.n1 {
+			background: color($verde,light:-10);
+		}
+
+		&.n2 {
+			background: color($laranxa,light:-10);
+		}
+
+		&.n3 {
+			background: color($vermello,light:-10);
+		}
+	}
+    
+	> figure {
+		padding: 3px;
+		background: white;
+		box-shadow: 0 0 2px color(black, alpha:0.3);
+		border: solid 1px color(black, 25);
+		margin-bottom: 5px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+    
+	header {
+        
+		h1 {
+			font-size: 1rem;
+			text-align: center;
+
+			a {
+				color: $azul;
+				text-decoration: none;
+			}
+            
+			a:hover {
+				color: black;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+/* Ficha de especie */
+
+section.content > header span.especie-bloqueada {
+    font-size: 1rem;
+    margin: 0 0 0 10px;
+    vertical-align: bottom;
+}
+
+article.especie-permalink {
+    
+    > header {
+        span {
+            min-height: 39px;
+        }
+    }
+    
+	header {
+		margin-bottom:20px; 
+		
+		h1 {
+			font-size: 2rem;
+			text-align: left;
+            
+            span {
+                display: inline-block;
+                min-width: 0;
+                
+                transition: all 100ms;
+                
+                &.hidden {
+                    display: none;
+                }
+            }
+            
+            span.trocar-editable {
+                margin-bottom: 4px;
+                min-width: 365px;
+                padding: 4px 8px;
+                
+                &.has-placeholder {
+                    color: #CCC;
+                    font-style: italic;
+                }
+            }
+            
+            #autor, #subespecie_autor, #variedade_autor {
+                min-width: 250px;
+            }
+            
+            span.select {
+                .desplegable {
+                    display: none;
+                    font-size: 2rem;
+                    width: 130px;
+                    transition: all 100ms;
+                    white-space: nowrap;
+                }
+                
+                &.select-editable {
+                    .texto {
+                        display: none;
+                    }
+                    
+                    .desplegable {
+                        display: inline-block;
+                        font-size: 1.7rem;
+                        
+                        span {
+                            margin-right: 4px;
+                        }
+                    }
+                }
+            }
+		}
+        
+        .info-nome {
+            height: 0;
+            margin: 8px 0;
+            overflow: hidden;
+            text-align: center;
+            transition: all 100ms;
+        }
+	}
+    
+    .trocar-editable {
+        appearance: textfield;
+        border: 2px inset #EEE;
+        background: #FFF;
+	}
+    
+    span.error {
+        color: color($vermello, 90);
+        display: block;
+        font-size: 0.9rem;
+        margin: 0 0 8px;
+        text-align: center;
+    }
+
+	.especie-clasificacion {
+        border: 1px solid color(black,10);
+		list-style: none;
+		margin: 0 0 20px 0;
+		padding: 15px;
+
+		li {
+			display: inline-block;
+			margin-left: 10px;
+
+			i {
+				color:color(black,15);
+			}
+            
+            .select-categoria {
+                display: none;
+                
+                select {
+                    width: 155px;
+                }
+            }
+            
+            &:first-child {
+                margin-left: 0;
+            }
+            
+            div {
+                text-transform: capitalize;
+            }
+		}
+        
+        &.editable {
+            
+            .nome-categoria {
+                display: none;
+            }
+            
+            .select-categoria {
+                display: block;
+            }
+        }
+	}
+
+    
+	.bloque-edit {
+		color: color(black, 80);
+		line-height: 1.3;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		
+		h1 {
+			font-size: 1.1rem;
+			margin: 0;
+		}
+	}
+	.cke {
+		margin-bottom: 20px;
+	}
+
+	.tabs {
+        
+		h1 {
+			color: color(black, 80);
+			font-size: 1.1rem;
+			margin: 0 0 5px 0;
+
+			a {
+				color:$azul;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color:black;
+			} 	
+		}
+        
+        .texto-ficha {
+            margin: 10px 0 20px 0;
+            
+            > * {
+                font-family: Lato, sans-serif !important;
+                font-size: 0.85rem !important;
+            }
+        }
+	}
+
+	section.height {
+		min-height: 180px;
+	}
+    
+    .media {
+        box-shadow: 0 0 2px #999;
+        overflow: hidden;
+        padding: 0;
+        transition: all 1s;
+        
+        .galeria {
+            box-shadow: none;
+        }
+        
+        &.empty {
+            display: none;
+            height: 0;
+            transition: all 100ms;
+            
+            .galeria {
+                display: none;
+            }
+        }
+        
+        &.editable.empty {
+            display: block;
+        }
+        
+        .imagelist {
+            box-sizing: border-box;
+            display: none;
+            padding: 20px;
+        }
+        
+        small a {
+            color: $azul;
+        }
+        
+        .link-comparador {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+    
+    nav.edicion {
+        clear: both;
+        display: none;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        
+        button:first-child {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+/* ============ AVISTAMENTOS ============ */
+
+/* Miniatura de avistamentos */
+
+article.especie-avistamento {
+	overflow: hidden;
+
+	> figure {
+		padding: 3px;
+		background: white;
+		box-shadow: 0 0 2px color(black, alpha:0.3);
+		border: solid 1px color(black, 25);
+		margin-bottom: 5px;
+		float: left;
+		margin-right: 20px;
+
+        > img {
+            max-width: 100%;
+            height: auto;
+        }
+	}
+	header {
+		overflow: hidden;	
+
+		h1 {
+			font-size: 1.1rem;
+            line-height: 1.1;
+
+			a {
+				color: $azul;
+				text-decoration: none;
+			}
+			a:hover {
+				color: black;
+				text-decoration: underline;
+			}
+
+			.estado {
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: normal;
+				padding: 1px 5px;
+				border-radius: 6px;
+                
+                &.hidden {
+                    display: none;
+                }
+			}
+
+			.estado.activa {
+				background: color($laranxa, 50);
+				color:color($laranxa,light:-20);
+			}				
+
+			.estado.solucionada {
+				background: color($verde, 50);
+				color:color($verde,light:-20);
+			}
+		}
+	}
+    
+    .detalle-nome-especie {
+        font-size: 0.9rem;
+    }
+    
+    .autor-especie {
+        font-size: 0.9rem;
+    }
+
+	.avistamento-informacion {
+		list-style: none;
+		margin: 10px 0 10px 0;
+		line-height: 1.3;
+
+		> li {
+			margin: 3px 0 0 0;
+			font-size: 0.9rem;
+
+			a {
+				color:$azul;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: black;
+				text-decoration: underline;
+			}
+		}
+	}
+    
+    .listado-puntos {
+        list-style: none;
+		margin: 10px 0 0 0;
+		line-height: 1.3;
+        
+        > li {
+			display: inline-block;
+			font-size: 0.9rem;
+            margin: 0 10px 0 0;
+            width: 270px;
+        }
+    }
+    
+    &.mediano {
+        
+        > header {
+            margin-bottom: 10px;
+    
+            h1 {
+                font-size: 0.9rem;
+            }
+    
+            .estado {
+                font-size: 0.8rem;
+            }
+        }
+        .avistamento-informacion {
+            margin:0;
+    
+            > li {
+                font-size: 0.75rem;
+            }
+        }
+        .btn-link {
+            display: block;
+            font-size: 0.8rem;
+        }
+    }
+    
+    &.tooltip-avistamento {
+        width: 300px;
+    }
+}
+.infoBox {
+    article.especie-avistamento.especie-avistamento-portada {
+        > figure {
+            float: left;
+        }
+    }
+}
+
+/* Ficha de avistamentos */
+
+article.especie-avistamento-permalink {
+	> header {
+		margin-bottom: 20px;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		h2 {
+			color: color(black, 40);
+			font-size: 1.4rem;
+			font-weight: normal;
+		}
+	}
+
+	.tabs {
+		margin-top: 40px;
+	}
+
+	section.datos-ficha {
+		border: 1px solid color(black, 10);
+		padding: 15px;
+		box-sizing:border-box;
+		margin: 10px 0;
+		border-radius: 8px;
+		float: left;
+		width: 100%;
+
+		h1 {
+			font-size: 1.4rem;
+			margin:0 0 15px 0;
+			color:black;
+			text-shadow:1px 1px 0 white;
+
+			a {
+				color:black;
+				text-decoration: none;
+			}
+		}
+
+		h2 {
+			font-size: 1.1rem;
+			margin:25px 0 10px 0;
+		}		
+
+		h3 {
+			font-size: 1rem;
+			margin:15px 0 10px 0;
+		}
+
+		.avistamento-informacion {
+			color:color(black, 60);
+			list-style: none;
+			margin: 0 0 10px 0;
+
+			> li {
+				width: 45%;
+				vertical-align: top;
+				margin-right: 4%;
+				display: inline-block;
+				font-size: 1rem;
+				border-bottom: 1px dashed color(black, 15);
+				padding-bottom: 5px;
+				margin-bottom: 5px;
+			}
+		}	
+	}
+	.avistamento-intro {
+		color: color(black, 80);
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+
+	.listaxe-relacionada {
+		margin-top: 10px;
+		
+		header {
+			h1 {
+				font-size: 1rem;
+				margin: 0;
+			}
+		}
+
+		.avistamentos-especies {
+			list-style: none;
+			margin: 0;
+
+			> li {
+				display: inline-block;
+				width: 45%;
+				vertical-align: top;
+				margin-right: 4%;
+
+				> ul {
+					list-style: none;
+					margin: 0;
+					font-size: 1rem;
+					line-height: 1.3;
+
+					a {
+						color: $azul;
+						text-decoration: none;
+
+						&:hover {
+							color: black;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#mgrs_coords {
+    max-width: 480px;
+}
+
+/* ============ COLUMNA DEREITA ============ */
+
+.sidebar-ficha {
+	.info {
+		> header {
+
+			p.autor {
+				span {
+					display: inline-block;
+					min-width: 150px;
+				} 
+			}
+			.nivel-ameaza {
+				color:black;
+				display: inline-block;
+                font-size: 0.9rem;
+                
+                > div > strong {
+                    display: inline-block;
+                    margin-bottom: 4px;
+                }
+                
+                select {
+                    width: 220px;
+                }
+                
+                .texto-ameaza {
+                    min-height: 28px;
+                }
+                
+                .select-ameaza {
+                    display: none;
+                }
+			}			
+            
+			i.nivel-ameaza {
+				float: left;
+				height: 16px;
+				margin-right: 4px;
+				padding: 0;
+				width: 16px;
+
+				&.n1 {
+					background: color($verde,light:-10);
+				}
+
+				&.n2 {
+					background: color($laranxa,light:-10);
+				}
+
+				&.n3 {
+					background: color($vermello,light:-10);
+				}
+			}
+            
+            .proteccion {
+                color:black;
+                font-size: 0.9rem;
+                margin-top: 8px;
+                margin-bottom: 4px;
+                
+                &.empty {
+                    display: none;
+                }
+                
+                .input-proteccions {
+                    display: none;
+                }
+                
+                .catalogos-proteccion {
+                    margin-top: 8px;
+                }
+                
+                .catalogos-proteccion.empty {
+                    display: none;
+                }
+                
+                .catalogos-proteccion.hidden {
+                    display: none !important;
+                }
+                
+                #proteccions-tipos-select {
+                    display: none;
+                    
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+            
+		}
+        
+        .lsid {
+            color:black;
+            display: block;
+            font-size: 0.9rem;
+            
+            &.empty {
+                display: none;
+            }
+            
+            > div > strong {
+                display: inline-block;
+                margin-bottom: 4px;
+            }
+        }
+        
+        .extra-nomes {
+            
+            &.empty {
+                display: none;
+            }
+            
+            > ul > li {
+                margin-top: 4px;
+                transition: all 100ms;
+                
+                &:first-child {
+                    margin-top: 0;
+                }
+                
+                &.empty {
+                    display: none;
+                    height: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+        
+        .validacion {
+            font-size: 0.9rem;
+            
+            > div {
+                display: inline-block;
+                
+                &.hidden {
+                    display: none;
+                }
+            }
+            
+            .texto-validacion, .datos-validados {
+                margin-left: 10px;
+            }
+            
+            .estado {
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: normal;
+				padding: 1px 5px;
+				border-radius: 6px;
+                
+                &.hidden {
+                    display: none;
+                }
+			}
+
+			.estado.activa {
+				background: color($laranxa, 50);
+				color:color($laranxa,light:-20);
+			}				
+
+			.estado.solucionada {
+				background: color($verde, 50);
+				color:color($verde,light:-20);
+			}
+        }
+        
+        .especies-relacionadas {
+            a  {
+                color: $azul;
+                font-size: 0.85rem;
+                text-decoration: none;
+            }
+        }
+
+		section.ligazons {
+			li {
+
+				a {
+					color:$azul;
+					text-decoration: none;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		section.historico {
+			li {
+
+                display: block;
+                clear:both;
+                margin-bottom: 2px;
+                overflow: auto;
+                
+				a.autor {
+					color:$azul;
+					text-decoration: none;
+				}
+				a.autor:hover {
+					text-decoration: underline;
+				}
+                
+                a.btn {
+                    font-size: 0.8rem;
+                }
+                
+                &.ver-anteriores {
+                    text-align: center;
+                }
+			}
+            
+            nav {
+                overflow: auto;
+                margin-top: 8px;
+                
+                a {
+					color:$azul;
+                    font-size: 0.9rem;
+					text-decoration: none;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
+            }
+		}
+        
+        .membros {
+            h1 {
+                margin-bottom: 8px;
+            }
+        }
+	}
+    
+    .enlace-mapa {
+        text-align: center;
+    }
+    
+    .trocar-editable {
+        appearance: textfield;
+        border: 2px inset #EEE;
+        box-sizing: border-box;
+		background: #FFF;
+        display: inline-block;
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+        padding: 4px 8px;
+        width: 100%;
+	}
+}
+
+/* ============ EDICION INLINE ============ */
+
+.content.editable {
+    
+    article.especie-permalink {
+        
+        span.texto-tipo-sub {
+            min-width: 100px;
+        }
+        
+        .media {
+            
+            .galeria {
+                display: none;
+            }
+            
+            .imagelist {
+                display: block;
+            }
+        }
+        
+        .tabs {
+            .texto-ficha {
+                appearance: textfield;
+                border: 2px inset #EEE;
+                min-height: 65px;
+                padding: 4px;
+            }
+        }
+        
+        nav.edicion {
+            display: block;
+        }
+    }
+    
+    .sidebar-ficha {
+        
+	   .info {
+            
+            .nivel-ameaza {
+                
+                .texto-ameaza {
+                    display: none;
+                }
+                
+                .select-ameaza {
+                    display: block;
+                }
+            }
+            
+            .proteccion {
+            
+                &.empty {
+                    display: block;
+                }
+            
+                .texto-proteccions {
+                    display: none;
+                }
+                
+                .input-proteccions {
+                    display: block;
+                }
+                
+                .catalogos-proteccion.empty {
+                    display: block;
+                }
+                
+                #proteccions-tipos-texto {
+                    display: none;
+                }
+                
+                #proteccions-tipos-select {
+                    display: block;
+                }
+            }
+            
+            .lsid {
+                &.empty {
+                    display: block;
+                }
+            }
+            
+            .extra-nomes {
+            
+                &.empty {
+                    display: block;
+                }
+                
+                li {                    
+                    &.empty {
+                        display: block;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ============ OVERLAY ============ */
+
+#editar-especie
+    
+    > .content > .content.wrapper {
+        position: relative;
+        
+        .overlay-save  {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            
+            .overlay-background {
+                background: #000;
+                height: 100%;
+                opacity: 0.2;
+                width: 100%;
+            }
+            
+            .overlay-text {
+                font-size: 1.8rem;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                top: 45%;
+                width: 100%;
+            }
+        }    
+    }
+}
+
+#formulario-especie {
+    position: relative;
+        
+    .overlay  {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        
+        .overlay-background {
+            background: #000;
+            height: 100%;
+            opacity: 0.2;
+            width: 100%;
+        }
+        
+        .overlay-text {
+            font-size: 1.8rem;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            top: 45%;
+            width: 100%;
+        }
+    }
+}
+
+/* ============ VERSIONES ============ */
+
+.info-version {
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    border-radius: 4px;
+    color: #3a87ad;
+    font-size: 1.2rem;
+    margin: 20px auto 0;
+    padding: 4px 0;
+    text-align: center;
+    max-width: 300px;
+        
+    a {
+        color: #3a87ad;
+    }
+}

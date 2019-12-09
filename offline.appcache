@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# v0.3
+/m/favicon.ico
+/m/apple-touch-icon.png
+/mobil/templates/js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css
+/mobil/templates/js/jquery.mobile-1.3.2/jquery.mobile.structure-1.3.2.min.css
+/mobil/templates/js/jquery.mobile-1.3.2/themes/biodiv.min.css
+/mobil/templates/css/estilos.css
+/common/jquery/jquery.min.js
+/mobil/templates/js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js
+/mobil/templates/js/helpers.js
+/mobil/templates/js/notas.js
+/mobil/templates/js/scripts-notas.js
+/mobil/templates/js/scripts-home.js
+/mobil/templates/img/logo-biodiv.png
+/mobil/templates/js/jquery.mobile-1.3.2/themes/images/ajax-loader.gif
+/common/jquery/jquery-2.0.3.min.map
+/mobil/templates/js/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.map
+/mobil/templates/js/jquery.mobile-1.3.2/themes/images/icons-18-white.png
+
+NETWORK:
+*

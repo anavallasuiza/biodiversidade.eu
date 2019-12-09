@@ -1,0 +1,25 @@
+
+.listado-editores {
+    
+    h1 {
+        font-size: 1.4rem;
+        color: #333;
+    }
+    
+    .editores {
+        
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+            clear: both;
+            margin: 20px 0;
+            overflow: hidden;
+            
+            .avatar {
+                margin-right: 10px;
+            }
+        }
+    }
+}

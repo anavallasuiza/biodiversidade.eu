@@ -1,0 +1,119 @@
+.ficha-comunidade {
+	box-sizing:border-box;
+	border:1px solid color($verde-escuro,30);
+	background: $verde;
+	background: linear-gradient(to bottom, color($verde-escuro,5), color($verde-escuro,10));
+
+	> header {
+		padding: 10px;
+
+		h1 {
+			font-weight: 700;
+			font-size: 1.3rem;
+			margin-top: 10px;
+
+			a {	
+				color: color($verde-escuro, light:-5);
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+				color: black;
+			}
+		}
+	}
+
+	.datos {
+		list-style: none;
+		margin: 10px 0 0 0;
+		font-size: 0.9rem;
+		line-height: 1.3;
+		color: color($verde-escuro, light:-5);
+
+		li {
+			display: inline-block;
+		}
+
+		a {
+			color: $verde-escuro;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	figure {
+		border-bottom:1px solid color($verde-escuro,30);
+		background: white;
+	}
+
+	.perfil-logo {
+		margin: 0 auto;
+		display: block;
+		background: white;
+		padding: 10px;
+	}
+
+	.descricion {
+		color: color($verde-escuro,80);
+		font-size: 0.9rem;
+		line-height: 1.3;
+		padding:0 10px 10px 10px;
+
+		p {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.ficha-comunidade.permalink {
+   	margin: 5px 0 30px 0;
+   	background: 0;
+   	border: none;
+
+	header {
+		padding: 5px 0 15px 0;
+		border-bottom:1px solid color(black, 10);
+		border-top: none;
+		margin-bottom: 15px;
+		overflow: hidden;	
+
+		h1 {
+			font-size: 2rem;
+			text-align: left;
+		}
+
+		figure {
+			border-bottom:none;
+		}
+
+		.perfil-logo {
+	    	box-shadow: 0 0 2px color(black,60);
+	    	float: left;
+	    	margin: 5px 20px 5px 5px;
+	    	padding: 10px;
+		}
+
+		.datos {
+			overflow: hidden;
+			padding-left: 4px;
+			font-size: 1rem;
+			color: color(black,60);
+			
+			li {
+				display: block;
+			}
+
+			a {
+				color: $azul;
+			}
+		}
+	}
+	.descricion {
+		padding: 0;
+    	font-size: 1rem;
+    	color: color(black,70);
+	}
+}

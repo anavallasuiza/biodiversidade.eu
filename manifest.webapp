@@ -1,0 +1,15 @@
+{
+  "name": "Biodiversidade Ameazada de Galiza e norte de Portugal",
+  "description": "Galiza e Norte de Portugal. A mesma flora e semellantes ameazas. BIODIV_GNP é unha aposta común para a conservación da biodiversidade, socializando o coñecemento e creando ferramentas colectivas sen fronteiras.",
+  "launch_path": "/m/",
+  "appcache_path": "/offline.appcache",
+  "default_locale": "gl",
+  "installs_allowed_from": ["*"],
+  "icons": {
+    "200": "/mobil/templates/img/logo-imaxe.png"
+  },
+  "developer": {
+    "name": "A Navalla Suiza",
+    "url": "http://anavallasuiza.com"
+  }
+}

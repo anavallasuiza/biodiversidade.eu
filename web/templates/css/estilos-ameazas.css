@@ -1,0 +1,345 @@
+
+/* ========== Listado de ameazas ============== */
+
+.tabs-ameazas {
+    
+    .content-mapa-ameazas {
+        box-sizing: border-box;
+        box-shadow: 0 0 3px #D9D9D9;
+        border-radius: 4px;
+        margin: 10px 0;
+        max-width: 1240px;
+        padding: 5px;
+        
+        .mapa {
+            height: 450px;
+            max-width:100%;
+            width: 1240px;
+            
+            #mapa-toolbar-top {
+                text-align: left;
+                width: 100%;
+                background: #FFF;
+                box-shadow: 0px 0px 2px #999;
+                height: 30px;
+    
+                .columnas.controles-mapa {
+                    box-shadow: 1px 1px 1px #999;	
+                    position: absolute;
+                    left: 0;
+                    top: 30px;
+                    
+                    .row-controles {
+                        margin-top: -30px;
+                    }
+                }
+                
+                .btn {
+                    font-size: 0.8rem;
+                }
+                
+                .toolbar-mapa {
+                    padding: 0;
+                }
+            }
+        }
+    
+        .small-map {
+            height: 250px;
+        }
+    }
+    
+    .listado-ameazas.paxinado {
+        position: relative;
+        width: 100%;
+    
+        .item-listaxe {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            
+            > ul > li {
+                clear: both;
+                overflow: hidden;
+            }
+        }
+    }
+    
+    .subcontent-filter .btn {
+        margin-top: 0;
+    }
+    
+    div.alert.alert-info {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 80px auto;
+    }
+}
+
+/* ========== Datos de ameaza ============== */
+
+.ameaza {
+    
+    > figure {
+		padding: 3px;
+		background: white;
+		box-shadow: 0 0 2px color(black, alpha:0.3);
+		border: solid 1px color(black, 25);
+		margin-bottom: 5px;
+		float: left;
+		margin-right: 20px;
+	}
+    
+	> header {
+        
+        margin-left: 108px;
+        
+
+		h1 {
+			font-size: 1.1rem;
+
+			> a {
+				color: $azul;
+				text-decoration: none;
+
+				&:hover {
+					color: black;
+					text-decoration: underline;
+				}
+			}
+			.estado {
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: normal;
+				padding: 1px 5px;
+				border-radius: 6px;
+			}
+
+			.estado.activa {
+				background: color($laranxa, 50);
+				color:color($laranxa,light:-20);
+			}				
+
+			.estado.solucionada {
+				background: color($verde, 50);
+				color:color($verde,light:-20);
+			}
+		}
+
+		.ameaza-informacion {
+			list-style: none;
+			margin: 10px 0 10px 0;
+			
+            li {
+                display: inline;
+                margin:0;
+                font-size: 0.8rem;
+            }
+
+            li time {
+                display: block;
+                color: color(black, 40);
+            }
+		}
+	}
+    
+	.ameaza-intro {
+		margin-top: 10px;
+		color: color(black, 80);
+		line-height: 1.3;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+    
+    .estado-ameaza {
+        
+        .action {
+            h2 {
+                display: inline-block;
+            }
+        }
+        
+        .estado-b {
+			border-top: 1px solid color($verde-escuro, 30);
+			padding-top: 5px;
+			margin-top: 15px;
+
+			a {
+				color:$azul;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+					color:black;
+				}
+			}
+		}
+        
+        button {
+            margin-left: 20px;
+        }
+    }
+
+	.listaxe-relacionada {
+		margin-top: 10px;
+		
+		header {
+			h1 {
+				font-size: 1rem;
+				line-height: 1.3;
+				margin: 0;
+			}
+		}
+
+		.ameaza-especies {
+			list-style: none;
+			margin: 0;
+
+			> li {
+				display: inline-block;
+				width: 200px;
+				vertical-align: top;
+				margin-right: 20px;
+
+				> ul {
+					list-style: none;
+					margin: 0;
+					font-size: 0.9rem;
+					line-height: 1.3;
+
+					a {
+						color: $azul;
+						text-decoration: none;
+
+						&:hover {
+							color: black;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+.portada {
+    .ameaza {
+        > figure {
+            display: none;
+        }
+    }
+}
+*/
+
+.portada {
+    .ameaza {
+        
+        > figure {
+            display: none;
+        }
+        
+        > header {
+            margin-left: 0
+        }
+    }
+}
+
+/* ========== Ficha de ameazas ============== */
+.ameaza-permalink {
+	> header {
+        
+        margin-left: 0;
+        
+		h1 {
+			font-size: 2rem;
+		}
+	}
+
+	.listaxe-relacionada {
+		margin-top: 20px;
+	}
+    
+    .tipo-ameaza {
+        border: 1px solid #E6E6E6;
+        list-style: none;
+        margin: 20px 0 20px 0;
+        padding: 15px;
+        
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            
+            strong {
+                margin-right: 10px;
+            }
+            
+            a {
+                color: $azul;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+/* ========== Sidebar ameaza ============== */
+
+.sidebar-ameaza, .form-ameaza {
+    .content-mapa {
+        background: #FFF;
+        box-sizing: border-box;
+        box-shadow: 0 0 3px #D9D9D9;
+        border-radius: 4px;
+        margin: 10px 0;
+        padding: 5px;
+        
+        &.fullscreen {
+            height: 100%;
+            max-width: 100%;
+            padding: 0;
+            width: 100%;
+    
+            .mapa {
+                
+                #mapa-toolbar-top {
+                    box-sizing: border-box;
+                    height: 37px;
+                    padding: 4px;
+                }
+    
+                .columnas {
+                    margin: 7px;
+                }
+            }
+        }
+        
+        .mapa {
+            
+            
+            
+            .toolbar-mapa {
+                background: #FFF;
+                padding: 0 0 4px 0;
+                
+                .separator {
+                    border-left: 1px solid #999;
+                    display: inline-block;
+                    height: 8px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+

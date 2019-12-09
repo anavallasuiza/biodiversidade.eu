@@ -1,0 +1,12 @@
+.svn
+
+/phpcan/cache/*
+/phpcan/logs/*
+/tmp/*
+/web/cache/*
+/web/config/default
+/web/uploads/*
+/uploads/*
+
+*.sh
+*.sql

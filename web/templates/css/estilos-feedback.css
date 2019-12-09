@@ -1,0 +1,165 @@
+
+
+/*_________________________________________________ Feedback
+*/
+
+a.boton-feedback.fixed {
+	background: #000;
+	border: 2px solid #FFF;
+	border-bottom: none;
+	border-right: none;
+	box-shadow: -1px -1px 4px  #000;
+	color: #FFF;
+	font-size: 1rem;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	position: fixed;
+	right: 0;
+	text-decoration: none;
+	bottom: 0; 
+	z-index: 2099;
+}
+
+
+section.feedback {
+	min-width: 550px;
+
+	h1 {
+		font-size: 1.4rem;
+		letter-spacing: 0;
+	}
+
+	.erros-comuns {
+		float: left;
+		font-size: 0.9rem;
+		line-height: 1.3;
+		margin: 0;
+		width: 410px;
+		text-align: left;
+
+		a {
+			color: #444;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	form {
+		margin: 16px 0 0 0;
+
+		.tipo {
+			label {
+				cursor: pointer;
+				padding: 4px 12px;
+				display: inline-block;
+				font-weight: bold;
+				border-radius: 4px 4px 0 0;
+
+				input {
+					display: none;
+				}			  
+			}
+		}
+
+		fieldset {
+			padding: 10px;
+			box-sizing: border-box;
+			border-radius: 4px;
+			font-size: 0.9rem;
+
+			p {
+				margin: 4px;
+				margin-bottom: 8px;
+				
+				label {
+					display: block;
+				}
+				
+				input {
+					width: 50%;
+					margin-top: 3px;
+					margin-bottom: 10px;
+				}
+				
+				textarea {
+					height: 100px;
+					width: 100%;
+					margin-top: 3px;
+				}		
+			}
+
+			input.email {
+				display: none;
+			}
+		}
+		
+		.button {
+			margin-top: 12px;
+			text-align: right;
+			padding: 2px 1px;
+			
+			button {
+				font-weight: bold;
+				color: #FFF;
+				background: #000;
+				border-radius: 12px;
+				padding: 3px 12px;
+				border: solid 2px #FFF;
+				box-shadow: 0 0 2px #000;
+				cursor: pointer;
+				margin-top: 8px;
+			}
+		}
+	}
+	
+	.mensaxe-enviado, .mensaxe-erro, .loading {
+		margin-bottom: 50px;
+		margin-top: 50px;
+		text-align: center;
+	}
+}
+
+section.feedback.contido {
+	fieldset, form .tipo label.selected {
+		background: #ffc92f;
+		color: color(#ffc92f, light:-40);
+		text-shadow: 0 1px 0 color(#ffc92f, tint:30);
+	}
+	.button button:hover {
+		background: color(#ffc92f, light:-40);
+		color: #ffc92f;
+		border-color: #ffc92f;
+	}
+	fieldset {
+		border-radius: 0 8px 8px 8px;
+	}
+}
+section.feedback.erros {
+	fieldset, form .tipo label.selected {
+		background: color(#E63A17, tint:85);
+		color: color(#E63A17, light:-40);
+		text-shadow: 0 1px 0 color(#E63A17, tint:50);
+	}
+	.button button:hover {
+		background: color(#E63A17, light:-40);
+		color: color(#E63A17, tint:85);
+		border-color: color(#E63A17, tint:85);
+	}
+}
+section.feedback.comentarios {
+	fieldset, form .tipo label.selected {
+		background: #D0E823;
+		color: color(#D0E823, light:-40);
+		text-shadow: 0 1px 0 color(#D0E823, tint:30);
+	}
+	.button button:hover {
+		background: color(#D0E823, light:-40);
+		color: #D0E823;
+		border-color: #D0E823;
+	}
+}
+
+

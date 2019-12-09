@@ -1,0 +1,40 @@
+
+.listaxes-preguntas {
+	margin-top: 20px;
+
+	> div {
+
+		> header {
+			h1 {
+				font-size: 1.1rem;
+				color: color(black, 80);
+				margin-bottom: 5px;
+			}
+		}
+
+		> ul {
+			margin: 0 0 20px 0;
+			list-style: none;
+
+			> li {
+				font-size: 1rem;
+				line-height: 1.1;
+				margin-bottom: 10px;
+
+				> a {
+					color:$azul;
+					text-decoration: none;
+				}
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+nav.listaxes-preguntas {
+	> div {
+		margin-top: 0;
+	}
+}

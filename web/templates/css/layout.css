@@ -1,0 +1,235 @@
+.ly-menu {
+	> ul {
+		list-style: none;
+		display: table;
+		margin: 0;
+
+		> li {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.ly-menu-right {
+		float: right;
+		margin-left: 10px;
+	}
+	.ly-menu-left {
+		overflow: hidden;
+	}
+
+	.ly-buscador {
+		float: right;
+	}
+}
+
+.ly-1f {
+	var-width: 260px;
+	var-padding: 20px;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	> .ly-e1 {
+		float: left;
+		width: $width;
+		padding-right: $padding;
+		border-right: solid 1px color(black, 15);
+	}
+
+	> .ly-e2 {
+		overflow: hidden;
+		position: relative;
+		left: -1px;
+		border-left: solid 1px color(black, 15);
+		padding-left: $padding;
+	}
+}
+
+.ly-f1 {
+	var-width: 340px;
+	var-padding: 20px;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	> .ly-e1 {
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+		padding-right: math($padding + $width);
+		margin-right: -$width;
+	}
+
+	> .ly-e2 {
+		overflow: hidden;
+		padding-left: $padding;
+	}
+}
+
+.ly-row {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: solid 1px color(black, 15);
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/*---------------------------------------------- Dúas columnas 50%
+*/
+.ly-11 {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	> .ly-e1, > .ly-e2 {
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+	}
+
+	> .ly-e1 {
+		padding-right:20px; 
+	}
+	
+	> .ly-e2 {
+		padding-left:20px; 
+	}
+}
+
+
+/*---------------------------------------------- Dúas columnas 30% 70% 
+*/
+.ly-12 {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	> .ly-e12, > .ly-e22 {
+		float: left;
+		box-sizing: border-box;
+	}
+
+	> .ly-e12 {
+		padding-right:20px;
+		width: 30%;
+	}
+	
+	> .ly-e22 {
+		padding-left:20px;
+		width: 70%;
+	}
+}
+
+
+/*---------------------------------------------- Dúas columnas 70% 30% 
+*/
+.ly-21 {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	> .ly-e21, > .ly-e22 {
+		float: left;
+		box-sizing: border-box;
+	}
+
+	> .ly-e21 {
+		padding-right:20px;
+		width: 65%;
+	}
+	
+	> .ly-e22 {
+		padding-left:0;
+		width: 35%;
+	}
+}
+
+
+/*---------------------------------------------- Dúas columnas 45%
+*/
+.ly-col-2 {
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	margin-right: 40px;
+}
+
+/*---------------------------------------------- Tres columnas 33%
+*/
+.ly-111 {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	> .ly-e1, > .ly-e2, > .ly-e3 {
+		width: 33%;
+		float: left;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+}
+
+/* Guarreridas para portada (sorry) */
+
+.ly-111_portada {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	> ul > li {
+		float: left;
+		width: 50%;
+		border: none;
+	}
+}
+@media (min-width: 1000px) {
+	.ly-111_portada {
+		> ul > li {
+			float: none;
+			width: auto;
+		}
+		> .ly-e1, > .ly-e2, > .ly-e3 {
+			width: 33%;
+			float: left;
+			padding: 0 20px 0 0;
+			box-sizing: border-box;
+		}
+	}
+}
+
+.ly-listaxe_portada {
+	> li {
+		border: none;
+	}
+}
+@media (min-width: 1000px) {
+	.ly-listaxe_portada {
+		> li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 20px 20px 0 !important;
+			box-sizing: border-box;
+			width: 47%;
+		}
+	}
+}

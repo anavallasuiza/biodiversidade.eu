@@ -1,0 +1,37 @@
+.formulario-pisos.buscador {
+	 fieldset {
+		.formulario-field {
+
+			label {
+				width: 100%;
+				font-size: 0.85rem;	
+			}
+
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			textarea,
+			.ck-placeholder {
+				width: 100%;
+			}
+
+			select.w2,
+			input.w2 {
+				width: 228px;
+			}
+		}
+
+		.formulario-field-cols {
+			margin-bottom: 5px;
+
+			p.label {
+				width: 100%;
+				font-size: 0.85rem;	
+			}
+
+			label {
+				font-size: 0.85rem;	
+			}
+		}
+	}
+}

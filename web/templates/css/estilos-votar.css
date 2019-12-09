@@ -1,0 +1,31 @@
+.rating-box {
+    width: 215px;
+    margin: 10px auto 0 auto;
+    text-align: center;
+}
+
+.rating {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.rating-input {
+    position: absolute;
+    left: 0;
+    top: -50px;
+}
+
+.rating:hover .rating-star:hover,
+.rating:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: -43px 0;
+}
+
+.rating-star, .rating:hover .rating-star {
+    float: right;
+    display: block;
+    width: 43px;
+    height: 43px;
+    background: url('../img/star.png') 0 0;
+}

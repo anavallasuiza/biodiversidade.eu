@@ -1,0 +1,76 @@
+.act-contido {
+	> i {
+		color:$verde;
+		margin-right: 15px !important;
+	}
+
+	time {
+		display: block;
+		font-size: 0.8rem;
+		color: color(black, 40);
+		margin: 0 0 5px 0;
+	}
+
+	.usuario {
+		overflow: hidden;
+		margin: 2px;
+
+		img.usuario {
+			border: solid 1px white;
+			box-shadow: 0 0 1px color(black, alpha:0.6);
+		}
+
+		p {
+			font-size:0.9rem;
+			overflow: hidden;
+		
+			a {
+				color:$azul;
+				text-decoration: none;
+				
+			}
+
+			a:hover {
+				color:color(black,50);
+			}
+		}
+		
+		.activity-details {
+			margin-top: 15px;
+			background: color($verde-escuro, 10);
+			padding: 2px 4px;
+			border-radius: 6px;
+			color: color(black, 60);
+			text-shadow: 0 1px 0 white;
+			overflow: hidden;
+			font-size: 0.85rem;
+			
+			img {
+				float: left;
+				margin: 5px;
+			}
+
+			p {
+				overflow: hidden;
+				font-weight: normal;
+			}	
+		}
+	}
+}
+
+.actividade-portada {
+	background: white;
+	border: 1px solid color(black,10);
+	padding: 15px;
+	box-sizing:border-box;
+
+	header {
+		h1 {
+			color:color(black,80);
+			font-weight: normal;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+		}
+	}	
+}
+

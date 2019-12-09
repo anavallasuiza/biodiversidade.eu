@@ -1,0 +1,207 @@
+
+:root {
+	var-verde: #85b200;
+	var-verde-escuro: #496d4e;
+	var-azul: #006298;
+	var-laranxa:#DC8607;
+	var-violeta:#8E4A87;
+	var-vermello:#E13860;
+}
+
+.formulario-arquivo {
+	label {
+		display: block;
+	}
+
+	p.alert {
+		font-style: italic;
+		margin: 20px 0;
+	}
+
+	button {
+		margin-top: 20px;
+	}
+}
+
+.warning-importacion {
+	background-color: #F2DEDE;
+	border: 1px solid #EED3D7;
+	color: #B94A48;
+	margin: 20px 0;
+	padding: 10px;
+}
+
+table.dataTable, table {
+
+	width: 100%;
+
+	td, th {
+		padding: 8px;
+	}
+
+	col.estado {
+		width: 30px;
+	}
+
+	col.nome {
+		width: 300px;
+	}
+
+	col.especie {
+		width: 400px;
+	}
+
+	
+
+	col.mensaxe {
+
+	}
+
+	col.procesado {
+		text-align: center;
+	}
+
+	tr.odd, tr.even {
+    	background: none;
+    }
+
+    /*
+    tr.success {
+	    background-color: rgb(161, 201, 44);
+	}
+
+	tr.error {
+	    background-color: rgba(235, 62, 62, 0.75);
+	}
+
+	tr.warning {
+	    background-color: rgb(243, 187, 88);
+	}
+	*/
+	tr.success {
+		background-color: #dff0d8;
+	}
+
+	tr.unknown {
+		background-color: #fcf8e3;
+	}
+
+	tr.new {
+		background-color: #d9edf7;
+	}
+
+	tr.existe {
+		opacity: 0.6;
+	}
+
+	tr.invalid-points {
+		background-color: #f2dede;
+
+		td i.icon-remove-circle {
+			color: #b94a48;
+		}
+	}
+	
+
+	td {
+
+		&.nome-arquivo {
+			label {
+				display: inline-block;
+				min-height: 45px;
+			}
+		}
+
+		
+
+		&.sinonimos {
+
+			> div {
+				margin-right: 0;
+			}
+
+			label {
+				
+			}
+
+			select {
+				width: 100px;
+			}
+		}
+
+		> div {
+			margin-right: 100px;
+		}
+
+		select, .listaxe-especies {
+			width: 300px;
+		}
+	}
+}
+
+.dataTables_length, .dataTables_filter {
+	margin-bottom: 10px;
+}
+
+.dataTables_length select {
+	width: 80px;
+}
+
+.dataTables_info, .dataTables_paginate {
+	margin-top: 10px;
+}
+
+a.cambiar-opcion {
+	color: #333;
+	font-size: 0.9rem;
+}
+
+
+div.accions {
+	clear: both;
+	padding-top: 20px;
+}
+
+.content {
+	nav {
+		margin-bottom: 20px;
+
+		a {
+			color: $azul;
+		}
+	}
+}
+
+
+.taboa-fichas, .taboa-puntos {
+	font-size: 0.8rem;
+}
+
+.fila-fichas, .fila-puntos {
+	display: none;
+}
+
+
+table td.ver {
+	cursor: pointer;
+	text-align: center;
+	width: 30px;
+}
+
+
+.resultado-importacion {
+	
+	p {
+		margin-bottom: 20px;
+	}
+
+	p.erros {
+		color: red;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	ul.listado-erros {
+		margin-bottom: 20px;
+	}
+}

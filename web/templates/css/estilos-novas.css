@@ -1,0 +1,168 @@
+.nova {
+	> header {
+		h1 {
+			font-weight: normal;
+			font-size: 1.7rem;
+
+			a {
+				color: $azul;
+				text-decoration: none;
+			}
+			a:hover {
+				color: black;
+			}
+		}
+	}
+
+	> footer {
+		font-size: 0.8rem;
+		color: color(black, 50);
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.nova-intro {
+		margin-top: 10px;
+		color: color(black, 80);
+		line-height: 1.3;
+
+		a {
+			color:$azul;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+.nova-permalink {
+	> header {
+		h1 {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+.actividade {
+	> header {
+		> time {
+			background: $verde;
+			background: linear-gradient(to bottom, $verde, color($verde, light:-3));
+			box-shadow: inset 0 0 2px color($verde-escuro);
+			border: solid 3px color($verde, 40);
+			border-radius: 3px;
+			color: white;
+			float: left;
+			width: 45px;
+			text-align: center;
+			font-weight: bold;
+			padding: 4px 0 7px 0;
+
+			> span {
+				display: block;
+				line-height: 1;
+				text-shadow: 0 1px 0 color($verde, light:-10);
+			}
+			> span.mes {
+				text-transform: uppercase;
+				font-size: 0.9rem;
+			}
+			> span.dia {
+				font-size: 1.8rem;
+			}
+		}
+		> h1 {
+			font-size: 1rem;
+			padding-left: 60px;
+
+			a {
+				font-weight: normal;
+				color: $azul;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+				color: black;
+			}
+		}
+
+		.actividade-lugar {
+			padding-left: 60px;
+			font-size: 0.9rem;
+			color: color(black, 50);
+		}
+	}
+	.actividade-accions {
+		padding-left: 60px;
+		margin-top: 5px;
+		font-size: 0.9rem;
+		color: color(black, 50);
+	}
+}
+.actividade-calendario {
+	> header {
+		> h1, .actividade-lugar {
+			padding-left: 0;
+		}
+	}
+	.actividade-accions {
+		padding-left: 0;
+	}
+}
+
+.actividade-permalink {
+	> header {
+		float: left;
+		width: 100%;
+		margin-bottom: 10px;
+		> time {
+			width: 65px;
+
+			> span.mes {
+				font-size: 1.4rem;
+			}
+			> span.dia {
+				font-size: 2.6rem;
+			}
+		}
+		
+		h1 {
+			font-size: 2.4rem;
+			padding-left: 20px;
+			overflow: hidden;
+		}
+
+		.info-actividade {
+			margin: 10px 0 0 0;
+			list-style: none;
+			width: 100%;
+			float: left;
+
+			li {
+				display: inline-block;
+				margin-right: 10px;
+				font-size: 0.9rem;
+			}			
+		}
+	}
+
+	.actividade-intro {
+		float: left;
+		margin-top: 10px;
+		color: color(black, 80);
+		line-height: 1.3;
+
+		p {
+			margin-bottom: 10px;
+		}
+	}
+}
